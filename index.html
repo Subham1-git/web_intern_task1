@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pro E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>🛒 MyStore</h2>
+        <div>
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('tech')">Tech</button>
+            <button onclick="filterProducts('clothes')">Clothes</button>
+        </div>
+    </nav>
+
+    <!-- PRODUCTS -->
+    <div class="product-container">
+
+        <div class="product" data-category="tech">
+            <img src="https://via.placeholder.com/150">
+            <h3>Laptop</h3>
+            <p>₹50000</p>
+            <button onclick="addToCart('Laptop', 50000)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="clothes">
+            <img src="https://via.placeholder.com/150">
+            <h3>T-Shirt</h3>
+            <p>₹500</p>
+            <button onclick="addToCart('T-Shirt', 500)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="tech">
+            <img src="https://via.placeholder.com/150">
+            <h3>Mobile</h3>
+            <p>₹20000</p>
+            <button onclick="addToCart('Mobile', 20000)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <!-- CART -->
+    <div class="cart">
+        <h2>🧾 Cart</h2>
+        <ul id="cartItems"></ul>
+        <h3>Total: ₹<span id="total">0</span></h3>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
